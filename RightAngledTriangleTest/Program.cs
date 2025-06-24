@@ -4,7 +4,6 @@ public class Program
 {
     static void Main(string[] args)
     {
-        Console.CancelKeyPress += new ConsoleCancelEventHandler(CancelKeyPressHandler);
         while (true)
         {
             double[] sides = { 0, 0, 0 };
@@ -51,10 +50,5 @@ public class Program
                 Console.WriteLine("Trojuhelník není pravoúhlý\n");
             }
         }
-    }
-    private static void CancelKeyPressHandler(object sender, ConsoleCancelEventArgs e)
-    {
-        e.Cancel = true;
-        Environment.Exit(0);
     }
 }
